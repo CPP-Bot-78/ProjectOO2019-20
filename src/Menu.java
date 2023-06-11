@@ -17,8 +17,8 @@ public class Menu
    
    public void start() throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    {  
-    System.out.println("Παρακαλούμε εισάγετε το email σας.");    
-    keyboard.close();
+    System.out.println("Παρακαλούμε εισάγετε το email σας. - hint: upAM@upatras.gr");
+    keyboard.reset();
     Scanner keyboard = new Scanner(System.in);
     try{ 
      String s = keyboard.nextLine();//ζητείται email
@@ -74,7 +74,7 @@ public class Menu
    }
    public void ownerMenu() throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    {
-     keyboard.close();
+     keyboard.reset();
      Scanner  keyboard = new Scanner(System.in);
      System.out.println("❖ Θες να περιηγηθείς στο κατάστημά ?      -> 'katastima' ");
      System.out.println("❖ Θες να ελέγξεις τους πελάτες ?          -> 'pelates'");
@@ -113,7 +113,7 @@ public class Menu
    }
    public void ownerBrowseStore() throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException 
    {
-     keyboard.close(); 
+     keyboard.reset(); 
      eshop.showProductsInCategory();
      System.out.print("Θα ήθελες να δεις πληροφορίες για συγκεκριμένο προϊόν (yes) ");
      System.out.println("ή προτιμάς να επιστρέψεις στο αρχικό μενού (menu) ?");
@@ -168,7 +168,7 @@ public class Menu
    }
    public void checkStatus() throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    {
-     keyboard.close();
+     keyboard.reset();
      Scanner  keyboard = new Scanner(System.in);
      eshop.checkStatus();
      System.out.println("Eπελέξε κάποιον πελάτη -> δώσε το όνομα του ?");
@@ -252,7 +252,7 @@ public class Menu
    }
     public void buyerMenu(Buyer buyer) throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    {
-     keyboard.close();
+     keyboard.reset();
      System.out.println("❖ Θα θέλατε να περιηγηθείτε στο κατάστημα μας ?     -> 'katastima'");
      System.out.println("❖ Θέλετε να δείτε το περιχόμενο του καλαθιού σας ?  -> 'kalathi'");
      System.out.println("❖ Επιθυμείτε να ολοκληρώσετε την παραγγελεία σας ?  -> 'pay'");
@@ -294,7 +294,7 @@ public class Menu
    }
     public void browseStore(Buyer buyer) throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    { 
-     keyboard.close(); //εξάλειψη σφαλμάτων
+     keyboard.reset(); //εξάλειψη σφαλμάτων
      Scanner keyboard = new Scanner(System.in);
      Item item;
      eshop.showProductsInCategory();  
@@ -342,7 +342,7 @@ public class Menu
                      browseStore(buyer);
                      break;
               }
-              keyboard.close();  
+              keyboard.reset();  
               System.out.println("Επιστρέφουμε στο αρχικό menu ή θα θέλατε να δείτε περισσότερα?");
               System.out.println("Πατήστε 'menu' αν θέλετε να γυρίσετε στο αρχικό μενού"); 
               System.out.println("Πατήστε όποιο άλλο γράμμα θέλετε ώστε να γυρίσετε στις διαθέσιμες κατηγορίες");              
@@ -373,7 +373,7 @@ public class Menu
     }
     public void viewCart(Buyer buyer) throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    {
-       keyboard.close();
+       keyboard.reset();
        Scanner keyboard = new Scanner(System.in);
       try{ 
        try{   
@@ -443,7 +443,7 @@ public class Menu
    }
    public void checkout(Buyer buyer) throws BuyerExistsAlreadyException, EmptyCartException, ItemOrderedDoesntExistsException
    { 
-      keyboard.close();
+      keyboard.reset();
       Scanner keyboard = new Scanner(System.in);
       try
       {   
@@ -468,7 +468,7 @@ public class Menu
    } 
    public String getItemInCart(Buyer buyer) throws ItemOrderedDoesntExistsException
    {  
-    keyboard.close();
+    keyboard.reset();
     Scanner keyboard = new Scanner(System.in);
     String itemordered = ""; //το αντικείμενο που επιστρέφεται   
     System.out.println("Επιλέξτε προϊόν -> με βάση το όνομα:");

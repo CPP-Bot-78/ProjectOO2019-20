@@ -90,7 +90,7 @@ public class EShop
     }
      public void showProductsInCategory()
     {   
-      keyboard.close();
+      keyboard.reset();
       Scanner keyboard = new Scanner(System.in);
       System.out.println("Ποια κατηγορία θα θέλατε να δείτε :");
       System.out.println("Πληκτρολογήστε: ");
@@ -127,7 +127,7 @@ public class EShop
     }
      public Item showProduct()
     {
-      keyboard.close(); 
+      keyboard.reset(); 
       Scanner keyboard = new Scanner(System.in);
       int product = 0;
       String details = "";
